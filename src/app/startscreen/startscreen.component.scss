@@ -1,3 +1,10 @@
+@mixin center-abs() {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
 #startscreen {
     position: relative;
     width: 100%;
@@ -10,21 +17,46 @@
         width: inherit;
         object-fit: cover;
         transform: translateY(100px);
-        opacity: 0.5;
+        opacity: 0.4;
     }
 
     #title {
-        position: absolute;
+        @include center-abs();
         top: 10vh;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
         font-family: 'Cinzel Decorative', serif;
         font-size: 140px;
         font-weight: 700;
         text-align: center;
         line-height: 120px;
-        color: rgb(247, 91, 19);
-        text-shadow: 0 0 10px white;
+        color: rgb(123, 1, 1);
+        text-shadow: -1px 1px 0 #ffbf00,
+                     1px 1px 0 #ffe8a3,
+                     1px -1px 0 #ffd6be,
+                     -1px -1px 0 red,
+                     0 0 20px #fff;
+    }
+
+    #startbutton {
+        @include center-abs();
+        bottom: 22vh;
+        padding: 15px 50px;
+        color: black;
+        display: flex;
+        justify-content: center;
+        /* border: solid; */
+        width: max-content;
+        font-size: 30px;
+        font-weight: 700;
+        border-radius: 0px 30px;
+        /* background-color: orangered; */
+        background: linear-gradient(0deg, rgba(97,0,0,1) 0%, rgba(255,162,0,1) 35%, rgba(255,252,0,1) 100%);
+        box-shadow: 0 0 10px 0 black;
+        transition: all 450ms ease-out;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px 2px rgb(255, 255, 255);
+        }
     }
 }
