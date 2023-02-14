@@ -17,7 +17,7 @@
         width: inherit;
         object-fit: cover;
         transform: translateY(100px);
-        opacity: 0.4;
+        opacity: 0.55;
     }
 
     #title {
@@ -33,6 +33,7 @@
                      1px 1px 0 #ffe8a3,
                      1px -1px 0 #ffd6be,
                      -1px -1px 0 red,
+                     0 0 8px #ffeec9,
                      0 0 20px #fff;
     }
 
