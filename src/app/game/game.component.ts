@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class GameComponent {
   cardStack = [0, 1, 2, 3];
+  isCardPicked = false;
+
+  pickCard() {
+    this.isCardPicked = true;
+  }
 }

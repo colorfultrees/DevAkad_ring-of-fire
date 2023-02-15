@@ -2,6 +2,9 @@
     <div id="card-stack">
         <img src="/assets/img/cards/green_back.png" alt="card back green" *ngFor="let card of cardStack; let i = index;"
             [ngStyle]="{'right.px': i * 5}">
-        <img src="/assets/img/cards/green_back.png" [ngStyle]="{'right.px': cardStack.length * 5}" id="top-card" alt="card back green">
+        <img src="/assets/img/cards/green_back.png" class="card-transition" (click)="pickCard()" [ngStyle]="{'right.px': cardStack.length * 5}"
+            id="top-card" alt="card back green">
+        <img src="/assets/img/cards/clubs_1.png" *ngIf="isCardPicked" class="picked-card"
+            [ngStyle]="{'right.px': cardStack.length * 5}" alt="picked card">
     </div>
 </div>
