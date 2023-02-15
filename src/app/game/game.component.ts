@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./game.component.scss']
 })
 export class GameComponent {
-
+  cardStack = [0, 1, 2, 3, 4];
 }

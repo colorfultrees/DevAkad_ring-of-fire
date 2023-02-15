@@ -1,0 +1,20 @@
+#board {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../../assets/img/wooden-table.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#card-stack {
+    position: relative;
+    margin-right: 70px;
+    margin-top: 70px;
+    img {
+        position: absolute;
+        width: 175px;
+    }
+}
