@@ -13,8 +13,17 @@
     position: relative;
     margin-right: 70px;
     margin-top: 70px;
+
     img {
         position: absolute;
         width: 175px;
+    }
+
+    #top-card {
+        transition: transform 160ms ease-out;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }
