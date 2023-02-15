@@ -20,10 +20,11 @@
     }
 
     #top-card {
+        cursor: pointer;
         transition: transform 160ms ease-out;
 
         &:hover {
-            transform: scale(1.1);
+            transform: scale(1.1) translateY(-30px);
         }
     }
 }
