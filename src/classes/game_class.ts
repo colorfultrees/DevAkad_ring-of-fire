@@ -9,7 +9,7 @@ export class Game {
 
     constructor() {
         this.CARD_TYPES.forEach(type => {
-            for (let i = 0; i < 13; i++) {
+            for (let i = 1; i <= 13; i++) {
                 this.cardStack.push(`${type}_${i}`);
             }
         })

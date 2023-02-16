@@ -8,8 +8,10 @@ import { Game } from 'src/classes/game_class';
   styleUrls: ['./game.component.scss']
 })
 export class GameComponent implements OnInit{
+  PICK_CARD_ANIMATION_TIME = 1500;
   cardStack = [0, 1, 2, 3];
   isCardPicked = false;
+  currentCard: string = '';
   game: Game;
 
   constructor() {}
@@ -24,6 +26,14 @@ export class GameComponent implements OnInit{
   }
 
   pickCard() {
-    this.isCardPicked = true;
+    if (!this.isCardPicked) {
+      this.currentCard = this.game.cardStack.pop();
+      console.log(this.currentCard);
+      this.isCardPicked = true;
+      
+      setTimeout(() => {
+        this.isCardPicked = false;
+      }, this.PICK_CARD_ANIMATION_TIME);
+    }
   }
 }

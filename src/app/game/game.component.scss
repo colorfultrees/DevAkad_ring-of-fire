@@ -1,5 +1,6 @@
 $move-card-up: -30px;
 $revealed-card: scale(1) translateX(220px) translateY(-150px) rotate(-20deg);
+$pick-card--animation: 1.2s;
 
 #board {
     width: 100%;
@@ -35,7 +36,7 @@ $revealed-card: scale(1) translateX(220px) translateY(-150px) rotate(-20deg);
 .picked-card {
     position: absolute;
     top: $move-card-up;
-    animation: pick-card-animation 1.2s ease-in-out forwards;
+    animation: pick-card-animation $pick-card--animation ease-in-out forwards;
 }
 
 @keyframes pick-card-animation {
