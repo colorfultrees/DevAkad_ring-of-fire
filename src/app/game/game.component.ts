@@ -8,7 +8,7 @@ import { Game } from 'src/classes/game_class';
   styleUrls: ['./game.component.scss']
 })
 export class GameComponent implements OnInit{
-  PICK_CARD_ANIMATION_TIME = 1500;
+  PICK_CARD_ANIMATION_TIME = 1200;
   cardStack = [0, 1, 2, 3];
   isCardPicked = false;
   currentCard: string = '';
@@ -28,10 +28,12 @@ export class GameComponent implements OnInit{
   pickCard() {
     if (!this.isCardPicked) {
       this.currentCard = this.game.cardStack.pop();
-      console.log(this.currentCard);
       this.isCardPicked = true;
+      console.log(`aktuelle Karte: ${this.currentCard}`);
+      console.log('Game: ', this.game);
       
       setTimeout(() => {
+        this.game.playedCard = this.currentCard;
         this.isCardPicked = false;
       }, this.PICK_CARD_ANIMATION_TIME);
     }

@@ -4,7 +4,7 @@ export class Game {
     private CARD_TYPES = ['clubs', 'diamonds', 'hearts', 'spade'];
     public players: string[] = [];
     public cardStack: string[] = [];
-    public playedCards: string[] = [];
+    public playedCard: string = '';
     public currentPlayer: number = 0;
 
     constructor() {

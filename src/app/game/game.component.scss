@@ -2,6 +2,11 @@ $move-card-up: -30px;
 $revealed-card: scale(1) translateX(220px) translateY(-150px) rotate(-20deg);
 $pick-card--animation: 1.2s;
 
+@mixin pick-card-position() {
+    position: absolute;
+    top: $move-card-up;
+}
+
 #board {
     width: 100%;
     height: 100vh;
@@ -33,9 +38,13 @@ $pick-card--animation: 1.2s;
     }
 }
 
+.played-card {
+    @include pick-card-position();
+    transform: $revealed-card;
+}
+
 .picked-card {
-    position: absolute;
-    top: $move-card-up;
+    @include pick-card-position();
     animation: pick-card-animation $pick-card--animation ease-in-out forwards;
 }
 
