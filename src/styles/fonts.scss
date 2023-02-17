@@ -140,3 +140,11 @@
          url('../assets/fonts/ubuntu/ubuntu-v20-latin-700.svg#Ubuntu') format('svg');
     /* Legacy iOS */
 }
+
+/* fallback */
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/material-icons/material-icons.woff2') format('woff2');
+  }
