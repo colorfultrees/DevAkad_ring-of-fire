@@ -29,12 +29,15 @@ export class GameComponent implements OnInit{
     if (!this.isCardPicked) {
       this.currentCard = this.game.cardStack.pop();
       this.isCardPicked = true;
+
       console.log(`aktuelle Karte: ${this.currentCard}`);
-      console.log('Game: ', this.game);
       
       setTimeout(() => {
         this.game.playedCard = this.currentCard;
         this.isCardPicked = false;
+
+        console.log('Game: ', this.game);
+        
       }, this.PICK_CARD_ANIMATION_TIME);
     }
   }

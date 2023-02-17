@@ -1,8 +1,25 @@
-import { shuffleArray } from "src/functions/aux_functions";
+import * as aux from "src/functions/aux_functions";
 
 export class Game {
     private CARD_TYPES = ['clubs', 'diamonds', 'hearts', 'spade'];
-    public players: string[] = [];
+    public players: any[] = [
+        {
+            name: 'Hans',
+            img: 1
+        },
+        {
+            name: 'Franz',
+            img: 3
+        },
+        {
+            name: 'Sabine',
+            img: 4
+        },
+        {
+            name: 'Christian',
+            img: 2
+        }
+    ];
     public cardStack: string[] = [];
     public playedCard: string = '';
     public currentPlayer: number = 0;
@@ -14,6 +31,6 @@ export class Game {
             }
         })
 
-        shuffleArray(this.cardStack);
+        aux.shuffleArray(this.cardStack);
     }
 }

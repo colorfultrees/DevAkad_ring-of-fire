@@ -62,3 +62,16 @@ $pick-card--animation: 1.2s;
         transform: $revealed-card;
     }
 }
+
+#players-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+    padding: 20px 0;
+    overflow: hidden;
+}
