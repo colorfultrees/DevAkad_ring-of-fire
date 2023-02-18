@@ -1,5 +1,8 @@
-<div id="players-container">
-    <app-player *ngFor="let player of game.players; let i = index" [playerName]="player.name" [playerImg]="player.img"></app-player>
+<div id="players-container-outer">
+    <div id="players-container">
+        <app-player *ngFor="let player of game.players; let i = index" [playerName]="player.name"
+            [playerImg]="player.img"></app-player>
+    </div>
 </div>
 
 <div id="board">
@@ -20,4 +23,8 @@
         <img src="/assets/img/cards/{{ currentCard }}.png" *ngIf="isCardPicked" class="picked-card"
             [ngStyle]="{'right.px': cardStack.length * 5}" alt="picked card">
     </div>
+
+    <button id="btn-add-player" title="Add new player" mat-fab color="warn">
+        <mat-icon>add</mat-icon>
+    </button>
 </div>

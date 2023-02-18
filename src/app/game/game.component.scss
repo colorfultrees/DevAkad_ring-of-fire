@@ -63,15 +63,25 @@ $pick-card--animation: 1.2s;
     }
 }
 
-#players-container {
+#players-container-outer {
     position: absolute;
     top: 0;
-    bottom: 0;
     right: 0;
+    bottom: 90px;
+    padding: 20px 0;
+}
+
+#players-container {
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 15px;
-    padding: 20px 0;
     overflow: hidden;
+}
+
+#btn-add-player {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
 }

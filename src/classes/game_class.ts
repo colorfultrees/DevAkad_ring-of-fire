@@ -18,6 +18,34 @@ export class Game {
         {
             name: 'Christian',
             img: 2
+        },
+        {
+            name: 'Sören',
+            img: 3
+        },
+        {
+            name: 'Malte',
+            img: 2
+        },
+        {
+            name: 'Hajo',
+            img: 5
+        },
+        {
+            name: 'Norman',
+            img: 4
+        },
+        {
+            name: 'Silvia',
+            img: 1
+        },
+        {
+            name: 'Petra',
+            img: 3
+        },
+        {
+            name: 'Marina',
+            img: 5
         }
     ];
     public cardStack: string[] = [];
