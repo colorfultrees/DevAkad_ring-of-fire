@@ -4,12 +4,12 @@
     <p>Please enter your name:</p>
     <mat-form-field appearance="fill">
         <mat-label>Your name</mat-label>
-        <input matInput>
+        <input matInput [(ngModel)]="name">
     </mat-form-field>
 </div>
 <div mat-dialog-actions>
     <button mat-button (click)="onNoClick()">Cancel</button>
-    <button mat-button cdkFocusInitial>OK</button>
+    <button mat-button cdkFocusInitial [mat-dialog-close]="">OK</button>
 </div>
 
 <!-- [(ngModel)]="name" -->
