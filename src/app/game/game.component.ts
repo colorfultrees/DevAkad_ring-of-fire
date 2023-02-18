@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Game } from 'src/classes/game_class';
 import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player.component';
+import { calcRandomNumber } from 'src/functions/aux_functions';
 
 
 @Component({
@@ -47,8 +48,9 @@ export class GameComponent implements OnInit{
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogAddPlayerComponent);
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+    dialogRef.afterClosed().subscribe(name => {
+      console.log('The dialog was closed', name);
+      this.game.players.push({'name': name, 'img': calcRandomNumber(1, 5)});
     });
   }
 }
