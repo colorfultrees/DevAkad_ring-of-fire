@@ -24,7 +24,7 @@
             [ngStyle]="{'right.px': cardStack.length * 5}" alt="picked card">
     </div>
 
-    <button id="btn-add-player" title="Add new player" mat-fab color="warn">
+    <button id="btn-add-player" (click)="openDialog()" mat-fab color="warn" title="Add new player">
         <mat-icon>add</mat-icon>
     </button>
 </div>
