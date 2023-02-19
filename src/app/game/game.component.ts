@@ -55,7 +55,9 @@ export class GameComponent implements OnInit{
 
     dialogRef.afterClosed().subscribe(name => {
       console.log('The dialog was closed', name);
-      this.game.players.push({'name': name, 'img': calcRandomNumber(1, 5)});
+      if (name) {
+        this.game.players.push({'name': name, 'img': calcRandomNumber(1, 5)});
+      }
     });
   }
 }
