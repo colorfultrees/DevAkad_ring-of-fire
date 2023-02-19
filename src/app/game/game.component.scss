@@ -21,7 +21,7 @@ $pick-card--animation: 1.2s;
 #card-stack {
     position: relative;
     margin-right: 70px;
-    margin-top: 70px;
+    // margin-top: 70px;
 
     img {
         position: absolute;
@@ -92,12 +92,12 @@ footer {
     padding: 0 30px 30px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 }
 
 #rule-info {
     background-color: honeydew;
-    padding: 0 20px;
+    // padding: 0 20px;
     flex-grow: 1;
     margin-right: 30px;
     border-radius: 15px;

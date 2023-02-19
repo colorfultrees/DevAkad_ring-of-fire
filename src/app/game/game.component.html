@@ -25,7 +25,7 @@
     </div>
 
     <footer>
-        <app-card-rule id="rule-info"></app-card-rule>
+        <app-card-rule id="rule-info" [card]="currentCard"></app-card-rule>
         <button id="btn-add-player" (click)="openDialog()" mat-fab color="warn" title="Add new player">
             <mat-icon>add</mat-icon>
         </button>
