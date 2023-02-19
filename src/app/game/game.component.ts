@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Game } from 'src/classes/game_class';
-import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player.component';
 import { calcRandomNumber } from 'src/functions/aux_functions';
+import { DialogGameoverComponent } from '../dialog-gameover/dialog-gameover.component';
 
 
 @Component({
@@ -15,6 +16,7 @@ export class GameComponent implements OnInit{
   cardStack = [0, 1, 2, 3];
   isCardPicked = false;
   currentCard: string = '';
+  gameOver: boolean = false;
   game: Game;
 
   constructor(public dialog: MatDialog) {}
@@ -29,29 +31,52 @@ export class GameComponent implements OnInit{
   }
 
   pickCard() {
-    if (this.game.players.length < 2) {
-      this.openDialog();
-      return;
-    }
+    if (!this.hasPlayers()) return;
 
     if (!this.isCardPicked) {
-      this.currentCard = this.game.cardStack.pop();
-      this.isCardPicked = true;
-
-      console.log(`aktuelle Karte: ${this.currentCard}`);
+      this.setCurrentCard();
+      this.isGameOver();
       
       setTimeout(() => {
-        this.game.playedCard = this.currentCard;
-        this.isCardPicked = false;
-
-        console.log('Game: ', this.game);
-
-        setTimeout(() => {
-          this.game.currentPlayer++;
-          this.game.currentPlayer = this.game.currentPlayer % this.game.players.length;
-        }, 500);
-        
+        this.setPlayedCard();
+        if (!this.gameOver) {
+          setTimeout(() => {
+            this.setCurrentPlayer();
+          }, 500);
+        }
       }, this.PICK_CARD_ANIMATION_TIME);
+    }
+  }
+
+  hasPlayers() {
+    if (this.game.players.length < 2) {
+      this.openDialog();
+      return false;
+    }
+    return true;
+  }
+
+  setCurrentCard() {
+    this.currentCard = this.game.cardStack.pop();
+    this.isCardPicked = true;
+  }
+
+  setPlayedCard() {
+    this.game.playedCard = this.currentCard;
+    this.isCardPicked = false;
+  }
+
+  setCurrentPlayer() {
+    this.game.currentPlayer++;
+    this.game.currentPlayer = this.game.currentPlayer % this.game.players.length;
+  }
+
+  isGameOver() {
+    if (this.game.cardStack.length == 0) {
+      this.gameOver = true;
+      setTimeout(() => {
+        this.openDialogGameOver();
+      }, this.PICK_CARD_ANIMATION_TIME + 500)
     }
   }
 
@@ -59,10 +84,20 @@ export class GameComponent implements OnInit{
     const dialogRef = this.dialog.open(DialogAddPlayerComponent);
 
     dialogRef.afterClosed().subscribe(name => {
-      console.log('The dialog was closed', name);
       if (name) {
         this.game.players.push({'name': name, 'img': calcRandomNumber(1, 5)});
       }
+    });
+  }
+
+  openDialogGameOver(): void {
+    const dialogRef = this.dialog.open(DialogGameoverComponent);
+
+    dialogRef.afterClosed().subscribe(() => {
+      let playersAsString = JSON.stringify(this.game.players);
+      this.gameOver = false;
+      this.newGame();
+      this.game.players = JSON.parse(playersAsString);
     });
   }
 }

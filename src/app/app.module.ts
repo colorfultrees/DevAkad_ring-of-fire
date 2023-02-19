@@ -14,7 +14,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { CardRuleComponent } from './card-rule/card-rule.component';
-import { MatCardModule } from '@angular/material/card'; 
+import { MatCardModule } from '@angular/material/card';
+import { DialogGameoverComponent } from './dialog-gameover/dialog-gameover.component'; 
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MatCardModule } from '@angular/material/card';
     GameComponent,
     PlayerComponent,
     DialogAddPlayerComponent,
-    CardRuleComponent
+    CardRuleComponent,
+    DialogGameoverComponent
   ],
   imports: [
     BrowserModule,
