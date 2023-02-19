@@ -40,6 +40,11 @@ export class GameComponent implements OnInit{
         this.isCardPicked = false;
 
         console.log('Game: ', this.game);
+
+        setTimeout(() => {
+          this.game.currentPlayer++;
+          this.game.currentPlayer = this.game.currentPlayer % this.game.players.length;
+        }, 500);
         
       }, this.PICK_CARD_ANIMATION_TIME);
     }
