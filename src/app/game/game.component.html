@@ -1,9 +1,9 @@
-<div id="players-container-outer">
+<!-- <div id="players-container-outer"> -->
     <div id="players-container">
         <app-player *ngFor="let player of game.players; let i = index" [playerName]="player.name"
             [playerImg]="player.img" [playerActive]="i == game.currentPlayer"></app-player>
     </div>
-</div>
+<!-- </div> -->
 
 <div id="board">
     <div id="card-stack">

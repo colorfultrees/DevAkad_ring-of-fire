@@ -29,6 +29,11 @@ export class GameComponent implements OnInit{
   }
 
   pickCard() {
+    if (this.game.players.length < 2) {
+      this.openDialog();
+      return;
+    }
+
     if (!this.isCardPicked) {
       this.currentCard = this.game.cardStack.pop();
       this.isCardPicked = true;
