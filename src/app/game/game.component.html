@@ -1,7 +1,7 @@
 <div id="players-container-outer">
     <div id="players-container">
         <app-player *ngFor="let player of game.players; let i = index" [playerName]="player.name"
-            [playerImg]="player.img"></app-player>
+            [playerImg]="player.img" [playerActive]="i == game.currentPlayer"></app-player>
     </div>
 </div>
 
@@ -24,7 +24,10 @@
             [ngStyle]="{'right.px': cardStack.length * 5}" alt="picked card">
     </div>
 
-    <button id="btn-add-player" (click)="openDialog()" mat-fab color="warn" title="Add new player">
-        <mat-icon>add</mat-icon>
-    </button>
+    <footer>
+        <app-card-rule id="rule-info"></app-card-rule>
+        <button id="btn-add-player" (click)="openDialog()" mat-fab color="warn" title="Add new player">
+            <mat-icon>add</mat-icon>
+        </button>
+    </footer>
 </div>

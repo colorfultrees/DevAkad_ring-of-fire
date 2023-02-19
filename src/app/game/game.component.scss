@@ -31,7 +31,7 @@ $pick-card--animation: 1.2s;
     #top-card {
         cursor: pointer;
         transition: transform 160ms ease-out;
-        
+
         &:hover {
             transform: translateY($move-card-up);
         }
@@ -52,12 +52,15 @@ $pick-card--animation: 1.2s;
     0% {
         transform: scale(1);
     }
+
     40% {
         transform: scale(1.3);
     }
+
     60% {
         transform: scale(1.3);
     }
+
     100% {
         transform: $revealed-card;
     }
@@ -73,15 +76,35 @@ $pick-card--animation: 1.2s;
 
 #players-container {
     height: 100%;
+    width: 200px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 15px;
+    // gap: 15px;
     overflow: hidden;
 }
 
-#btn-add-player {
+footer {
     position: absolute;
-    right: 30px;
-    bottom: 30px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 30px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+#rule-info {
+    background-color: honeydew;
+    padding: 0 20px;
+    flex-grow: 1;
+    margin-right: 30px;
+    border-radius: 15px;
+}
+
+// #btn-add-player {
+//     position: absolute;
+//     right: 30px;
+//     bottom: 30px;
+// }
