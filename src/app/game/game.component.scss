@@ -1,7 +1,4 @@
 $move-card-up: -30px;
-// $card-transX: 220px;
-// $card-transY: -150px;
-// $card-rot: -20deg;
 $pick-card--animation-time: 1.2s;
 
 @mixin pick-card-position() {
@@ -27,7 +24,6 @@ $pick-card--animation-time: 1.2s;
 #card-stack {
     position: relative;
     margin-right: 70px;
-    // margin-top: 70px;
 
     img {
         position: absolute;
@@ -56,21 +52,16 @@ $pick-card--animation-time: 1.2s;
     animation: pick-card-animation $pick-card--animation-time ease-in-out forwards;
 }
 
-// #players-container-outer {
-// }
-
 #players-container {
     position: absolute;
     top: 30px;
     right: 0;
     bottom: 130px;
     padding-top: 15px;
-    // height: 100%;
     width: 200px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    // gap: 15px;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -88,17 +79,10 @@ footer {
 
 #rule-info {
     background-color: honeydew;
-    // padding: 0 20px;
     flex-grow: 1;
     margin-right: 30px;
     border-radius: 15px;
 }
-
-// #btn-add-player {
-//     position: absolute;
-//     right: 30px;
-//     bottom: 30px;
-// }
 
 .hidden {
     visibility: hidden !important;

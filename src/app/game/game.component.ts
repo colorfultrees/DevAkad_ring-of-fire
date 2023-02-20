@@ -25,11 +25,20 @@ export class GameComponent implements OnInit{
     this.newGame();
   }
 
+
+  /**
+   * Initiates a new game
+   */
   newGame() {
     this.game = new Game();
     console.log(this.game);
   }
 
+
+  /**
+   * Handles the click on the top card
+   * @returns 
+   */
   pickCard() {
     if (!this.hasPlayers()) return;
 
@@ -48,6 +57,11 @@ export class GameComponent implements OnInit{
     }
   }
 
+
+  /**
+   * Checks if at least two players are registered
+   * @returns Boolean
+   */
   hasPlayers() {
     if (this.game.players.length < 2) {
       this.openDialog();
@@ -56,21 +70,37 @@ export class GameComponent implements OnInit{
     return true;
   }
 
+
+  /**
+   * Sets the current card
+   */
   setCurrentCard() {
     this.currentCard = this.game.cardStack.pop();
     this.isCardPicked = true;
   }
 
+
+  /**
+   * Sets the card on the stack of played cards
+   */
   setPlayedCard() {
     this.game.playedCard = this.currentCard;
     this.isCardPicked = false;
   }
 
+
+  /**
+   * Sets the next player
+   */
   setCurrentPlayer() {
     this.game.currentPlayer++;
     this.game.currentPlayer = this.game.currentPlayer % this.game.players.length;
   }
 
+
+  /**
+   * Checks if the game is over
+   */
   isGameOver() {
     if (this.game.cardStack.length == 0) {
       this.gameOver = true;
@@ -80,6 +110,10 @@ export class GameComponent implements OnInit{
     }
   }
 
+
+  /**
+   * Opens the dialog for adding a new player
+   */
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogAddPlayerComponent);
 
@@ -90,6 +124,10 @@ export class GameComponent implements OnInit{
     });
   }
 
+
+  /**
+   * Opens the dialog at the end of the game
+   */
   openDialogGameOver(): void {
     const dialogRef = this.dialog.open(DialogGameoverComponent);
 

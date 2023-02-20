@@ -12,8 +12,10 @@ export class StartscreenComponent {
 
   }
 
+  /**
+   * Switches to the game board
+   */
   newGame() {
-    // TODO: start game
     this.router.navigateByUrl('/game');
   }
 
