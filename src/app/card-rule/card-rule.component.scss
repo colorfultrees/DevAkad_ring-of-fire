@@ -9,3 +9,11 @@ mat-card {
         margin-top: 0;
     }
 }
+
+@media screen and (max-width: 450px) {
+    mat-card {
+        mat-card-title, p {
+            font-size: 16px;
+        }
+    }
+}

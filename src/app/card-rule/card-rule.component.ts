@@ -20,7 +20,7 @@ export class CardRuleComponent implements OnChanges {
     { title: 'Quizmaster', description: 'Ask a question. Those who cannot answer must drink.' },
     { title: 'Never have i ever...', description: 'Say something you never did. Everyone who did it has to drink.' },
     { title: 'Rule', description: 'Make a rule. Everyone needs to drink when he breaks the rule.' },
-    { title: 'Pick a card', description: '... and follow the rules.'}
+    { title: 'Click on a card', description: '... and follow the rules.'}
   ];
   currentTitle: string = '';
   currentDesc: string = '';

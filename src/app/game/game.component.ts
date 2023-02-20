@@ -96,6 +96,7 @@ export class GameComponent implements OnInit{
     dialogRef.afterClosed().subscribe(() => {
       let playersAsString = JSON.stringify(this.game.players);
       this.gameOver = false;
+      this.currentCard = '';
       this.newGame();
       this.game.players = JSON.parse(playersAsString);
     });
