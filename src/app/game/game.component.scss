@@ -154,7 +154,7 @@ footer {
     }
 
     .played-card {
-        @include card-transform(0px, -150px, -20deg);
+        @include card-transform(0px, -180px, -20deg);
     }
 
     .picked-card {
@@ -234,6 +234,6 @@ footer {
     }
 
     100% {
-        @include card-transform(0px, -150px, -20deg);
+        @include card-transform(0px, -180px, -20deg);
     }
 }
