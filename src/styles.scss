@@ -3,14 +3,16 @@
 
 * {
     box-sizing: border-box;
+    font-family: 'Ubuntu';
+    font-size: 18px;
+    scrollbar-width: thin !important;
+    scrollbar-color: chocolate lightgray !important;
 }
 
 body {
     height: 100vh;
     overflow: hidden;
     margin: 0;
-    font-family: 'Ubuntu';
-    font-size: 18px;
 }
 
 .material-icons {
@@ -27,4 +29,19 @@ body {
     direction: ltr;
     -moz-font-feature-settings: 'liga';
     -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: lightgray;
+    border-radius: 100vw;
+    margin-block: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: chocolate;
+    border-radius: 100vw;
 }

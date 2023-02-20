@@ -74,14 +74,15 @@ $pick-card--animation: 1.2s;
     top: 30px;
     right: 0;
     bottom: 130px;
-    // padding: 20px 0;
+    padding-top: 15px;
     // height: 100%;
     width: 200px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     // gap: 15px;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 footer {
