@@ -11,10 +11,11 @@
     height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: black;
 
     img {
-        width: inherit;
+        width: 120%;
         object-fit: cover;
         transform: translateY(100px);
         opacity: 0.55;
@@ -59,5 +60,20 @@
             transform: scale(1.1);
             box-shadow: 0 0 20px 2px rgb(255, 255, 255);
         }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #startscreen {
+        img {
+           width: 160%;
+           transform: translateY(40px);
+       }
+   
+       #title {
+           top: 15vh;
+           font-size: 100px;
+           line-height: 85px;
+       }
     }
 }
