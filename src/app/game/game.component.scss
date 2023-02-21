@@ -1,5 +1,5 @@
 $move-card-up: -30px;
-$pick-card--animation-time: 1.2s;
+$pick-card--animation-time: 60s; //1.2s;
 
 @mixin pick-card-position() {
     position: absolute;

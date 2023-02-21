@@ -14,28 +14,66 @@
     justify-content: center;
     background-color: black;
 
-    img {
-        width: 120%;
-        object-fit: cover;
-        transform: translateY(100px);
+
+    background-image: url('../../assets/img/card-deck.jpg');
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    #opac-layer {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: black;
         opacity: 0.55;
     }
+
+    // img {
+    //     width: 120%;
+    //     object-fit: cover;
+    //     transform: translateY(100px);
+    //     opacity: 0.55;
+    // }
 
     #title {
         @include center-abs();
         top: 10vh;
-        font-family: 'Cinzel Decorative', serif;
-        font-size: 140px;
-        font-weight: 700;
-        text-align: center;
-        line-height: 120px;
-        color: rgb(123, 1, 1);
-        text-shadow: -1px 1px 0 #ffbf00,
-                     1px 1px 0 #ffe8a3,
-                     1px -1px 0 #ffd6be,
-                     -1px -1px 0 red,
-                     0 0 8px #ffeec9,
-                     0 0 20px #fff;
+        // font-family: 'Cinzel Decorative', serif;
+        // font-size: 140px;
+        // font-weight: 700;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        // text-align: center;
+        // line-height: 120px;
+        // color: rgb(123, 1, 1);
+        // text-shadow: -1px 1px 0 #ffbf00,
+        //     1px 1px 0 #ffe8a3,
+        //     1px -1px 0 #ffd6be,
+        //     -1px -1px 0 red,
+        //     0 0 8px #ffeec9,
+        //     0 0 20px #fff;
+
+        span {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 140px;
+            font-weight: 700;
+            color: rgb(123, 1, 1);
+            text-shadow: -1px 1px 0 #ffbf00,
+                1px 1px 0 #ffe8a3,
+                1px -1px 0 #ffd6be,
+                -1px -1px 0 red,
+                0 0 8px #ffeec9,
+                0 0 20px #fff;
+        }
+
+        #title-middle-line {
+            margin: -67px 0;
+        }
     }
 
     #startbutton {
@@ -49,7 +87,7 @@
         font-size: 30px;
         font-weight: 700;
         border-radius: 0px 30px;
-        background: linear-gradient(0deg, rgba(97,0,0,1) 0%, rgba(255,162,0,1) 35%, rgba(255,252,0,1) 100%);
+        background: linear-gradient(0deg, rgba(97, 0, 0, 1) 0%, rgba(255, 162, 0, 1) 35%, rgba(255, 252, 0, 1) 100%);
         box-shadow: 0 0 10px 0 black;
         transition: all 450ms ease-out;
         cursor: pointer;
@@ -61,17 +99,49 @@
     }
 }
 
+@media screen and (max-width: 1400px) {
+    #startscreen {
+        background-size: 65%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #startscreen {
+        background-size: 75%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #startscreen {
+        background-size: 100%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #startscreen {
+        background-size: 110%;
+    }
+}
+
 @media screen and (max-width: 500px) {
     #startscreen {
-        img {
-           width: 160%;
-           transform: translateY(40px);
-       }
-   
-       #title {
-           top: 15vh;
-           font-size: 100px;
-           line-height: 85px;
-       }
+        background-size: 160%;
+        // img {
+        //     width: 160%;
+        //     transform: translateY(40px);
+        // }
+
+        #title {
+            top: 15vh;
+            // line-height: 85px;
+
+            span {
+                font-size: 100px;
+            }
+
+            #title-middle-line {
+                margin: -50px 0;
+            }
+        }
     }
 }

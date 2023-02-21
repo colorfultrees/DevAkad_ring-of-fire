@@ -12,7 +12,7 @@ import { DialogGameoverComponent } from '../dialog-gameover/dialog-gameover.comp
   styleUrls: ['./game.component.scss']
 })
 export class GameComponent implements OnInit{
-  PICK_CARD_ANIMATION_TIME = 1200;
+  PICK_CARD_ANIMATION_TIME = 60000; //1200;
   cardStack = [0, 1, 2, 3];
   isCardPicked = false;
   currentCard: string = '';
@@ -36,7 +36,6 @@ export class GameComponent implements OnInit{
 
   /**
    * Handles the click on the top card
-   * @returns 
    */
   pickCard() {
     if (!this.hasPlayers()) return;
