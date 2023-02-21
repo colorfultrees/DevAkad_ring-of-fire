@@ -49,10 +49,7 @@ $pick-card--animation-time: 1.2s;
 
 .picked-card {
     @include pick-card-position();
-    animation-name: pick-card-animation;
-    animation-duration: $pick-card--animation-time;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+    animation: pick-card-animation $pick-card--animation-time ease-in-out forwards;
 }
 
 #players-container {
@@ -95,7 +92,7 @@ footer {
 
 // *** MEDIA ***
 @media screen and (max-width: 750px) {
-    #card-stack{
+    #card-stack {
         margin-right: 100px;
 
         img {
@@ -115,7 +112,7 @@ footer {
 }
 
 @media screen and (max-width: 550px) {
-    #card-stack{
+    #card-stack {
         img {
             width: 100px;
         }
@@ -189,8 +186,7 @@ footer {
     }
 
     100% {
-        // @include card-transform(155px, -150px, -20deg);
-        transform: scale(1) translateX(155px) translateY(-150px) rotate(-20deg);
+        @include card-transform(155px, -150px, -20deg);
     }
 }
 
@@ -208,8 +204,7 @@ footer {
     }
 
     100% {
-        // @include card-transform(60px, -180px, -20deg);
-        transform: scale(1) translateX(60px) translateY(-180px) rotate(-20deg);
+        @include card-transform(60px, -180px, -20deg);
     }
 }
 
@@ -227,8 +222,7 @@ footer {
     }
 
     100% {
-        // @include card-transform(0px, -180px, -20deg);
-        transform: scale(1) translateX(0px) translateY(-180px) rotate(-20deg);
+        @include card-transform(0px, -180px, -20deg);
     }
 }
 
