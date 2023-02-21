@@ -1,5 +1,5 @@
 $move-card-up: -30px;
-$pick-card--animation-time: 60s; //1.2s;
+$pick-card--animation-time: 1.2s;
 
 @mixin pick-card-position() {
     position: absolute;
@@ -49,7 +49,10 @@ $pick-card--animation-time: 60s; //1.2s;
 
 .picked-card {
     @include pick-card-position();
-    animation: pick-card-animation $pick-card--animation-time ease-in-out forwards;
+    animation-name: pick-card-animation;
+    animation-duration: $pick-card--animation-time;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 #players-container {
@@ -105,7 +108,9 @@ footer {
     }
 
     .picked-card {
-        animation: pick-card-animation__750 $pick-card--animation-time ease-in-out forwards;
+        // animation: pick-card-animation__750 $pick-card--animation-time ease-in-out forwards;
+        animation-name: pick-card-animation__750;
+        // animation-name: test;
     }
 }
 
@@ -117,11 +122,12 @@ footer {
     }
 
     .played-card {
-        @include card-transform(60px, -150px, -20deg);
+        @include card-transform(60px, -180px, -20deg);
     }
 
     .picked-card {
-        animation: pick-card-animation__550 $pick-card--animation-time ease-in-out forwards;
+        // animation: pick-card-animation__550 $pick-card--animation-time ease-in-out forwards;
+        animation-name: pick-card-animation__550;
     }
 }
 
@@ -142,7 +148,8 @@ footer {
     }
 
     .picked-card {
-        animation: pick-card-animation__380 $pick-card--animation-time ease-in-out forwards;
+        // animation: pick-card-animation__380 $pick-card--animation-time ease-in-out forwards;
+        animation-name: pick-card-animation__380;
     }
 }
 
@@ -182,7 +189,8 @@ footer {
     }
 
     100% {
-        @include card-transform(155px, -150px, -20deg);
+        // @include card-transform(155px, -150px, -20deg);
+        transform: scale(1) translateX(155px) translateY(-150px) rotate(-20deg);
     }
 }
 
@@ -200,7 +208,8 @@ footer {
     }
 
     100% {
-        @include card-transform(60px, -150px, -20deg);
+        // @include card-transform(60px, -180px, -20deg);
+        transform: scale(1) translateX(60px) translateY(-180px) rotate(-20deg);
     }
 }
 
@@ -218,6 +227,21 @@ footer {
     }
 
     100% {
-        @include card-transform(0px, -180px, -20deg);
+        // @include card-transform(0px, -180px, -20deg);
+        transform: scale(1) translateX(0px) translateY(-180px) rotate(-20deg);
     }
 }
+
+// @keyframes test {
+//     0% {
+//         transform: translateX(100px);
+//     }
+
+//     50% {
+//         transform: translateY(100px);
+//     }
+
+//     100% {
+//         transform: translateX(-50px);
+//     }
+// }

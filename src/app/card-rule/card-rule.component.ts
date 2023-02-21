@@ -15,7 +15,7 @@ export class CardRuleComponent implements OnChanges {
     { title: 'Chicks', description: 'All girls drink.' },
     { title: 'Heaven', description: 'Put your hands up! The last player drinks!' },
     { title: 'Mate', description: 'Pick a mate. Your mate must always drink when you drink and the other way around.' },
-    { title: 'Thumbmaster', description: 'Put your thumb on the table, when you are ready. Everyone does the same. The last to notice must drink.' },
+    { title: 'Thumbmaster', description: 'Put your thumbs on the table. The last player drinks.' },
     { title: 'Men', description: 'All men drink.' },
     { title: 'Quizmaster', description: 'Ask a question. Those who cannot answer must drink.' },
     { title: 'Never have i ever...', description: 'Say something you never did. Everyone who did it has to drink.' },
