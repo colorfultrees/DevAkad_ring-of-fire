@@ -1,7 +1,7 @@
 import { shuffleArray } from "src/functions/aux_functions";
 
 export class Game {
-    private CARD_TYPES = ['clubs']; //, 'diamonds', 'hearts', 'spade'];
+    private CARD_TYPES = ['clubs', 'diamonds', 'hearts', 'spade'];
     public players: any[] = []; // data structure: {playerName: <string>, playerImg: <number>}
     public cardStack: string[] = [];
     public playedCard: string = '';
