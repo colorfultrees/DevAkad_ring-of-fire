@@ -109,6 +109,24 @@ footer {
         animation-name: pick-card-animation__750;
         // animation-name: test;
     }
+
+    @keyframes pick-card-animation__750 {
+        0% {
+            transform: scale(1);
+        }
+    
+        40% {
+            transform: scale(1.3);
+        }
+    
+        60% {
+            transform: scale(1.3);
+        }
+    
+        100% {
+            @include card-transform(155px, -150px, -20deg);
+        }
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -125,6 +143,24 @@ footer {
     .picked-card {
         // animation: pick-card-animation__550 $pick-card--animation-time ease-in-out forwards;
         animation-name: pick-card-animation__550;
+    }
+
+    @keyframes pick-card-animation__550 {
+        0% {
+            transform: scale(1);
+        }
+    
+        40% {
+            transform: scale(1.3);
+        }
+    
+        60% {
+            transform: scale(1.3);
+        }
+    
+        100% {
+            @include card-transform(60px, -180px, -20deg);
+        }
     }
 }
 
@@ -147,6 +183,24 @@ footer {
     .picked-card {
         // animation: pick-card-animation__380 $pick-card--animation-time ease-in-out forwards;
         animation-name: pick-card-animation__380;
+    }
+
+    @keyframes pick-card-animation__380 {
+        0% {
+            transform: scale(1);
+        }
+    
+        40% {
+            transform: scale(1.3);
+        }
+    
+        60% {
+            transform: scale(1.3);
+        }
+    
+        100% {
+            @include card-transform(0px, -180px, -20deg);
+        }
     }
 }
 
@@ -172,59 +226,59 @@ footer {
     }
 }
 
-@keyframes pick-card-animation__750 {
-    0% {
-        transform: scale(1);
-    }
+// @keyframes pick-card-animation__750 {
+//     0% {
+//         transform: scale(1);
+//     }
 
-    40% {
-        transform: scale(1.3);
-    }
+//     40% {
+//         transform: scale(1.3);
+//     }
 
-    60% {
-        transform: scale(1.3);
-    }
+//     60% {
+//         transform: scale(1.3);
+//     }
 
-    100% {
-        @include card-transform(155px, -150px, -20deg);
-    }
-}
+//     100% {
+//         @include card-transform(155px, -150px, -20deg);
+//     }
+// }
 
-@keyframes pick-card-animation__550 {
-    0% {
-        transform: scale(1);
-    }
+// @keyframes pick-card-animation__550 {
+//     0% {
+//         transform: scale(1);
+//     }
 
-    40% {
-        transform: scale(1.3);
-    }
+//     40% {
+//         transform: scale(1.3);
+//     }
 
-    60% {
-        transform: scale(1.3);
-    }
+//     60% {
+//         transform: scale(1.3);
+//     }
 
-    100% {
-        @include card-transform(60px, -180px, -20deg);
-    }
-}
+//     100% {
+//         @include card-transform(60px, -180px, -20deg);
+//     }
+// }
 
-@keyframes pick-card-animation__380 {
-    0% {
-        transform: scale(1);
-    }
+// @keyframes pick-card-animation__380 {
+//     0% {
+//         transform: scale(1);
+//     }
 
-    40% {
-        transform: scale(1.3);
-    }
+//     40% {
+//         transform: scale(1.3);
+//     }
 
-    60% {
-        transform: scale(1.3);
-    }
+//     60% {
+//         transform: scale(1.3);
+//     }
 
-    100% {
-        @include card-transform(0px, -180px, -20deg);
-    }
-}
+//     100% {
+//         @include card-transform(0px, -180px, -20deg);
+//     }
+// }
 
 // @keyframes test {
 //     0% {
