@@ -30,33 +30,13 @@
         opacity: 0.55;
     }
 
-    // img {
-    //     width: 120%;
-    //     object-fit: cover;
-    //     transform: translateY(100px);
-    //     opacity: 0.55;
-    // }
-
     #title {
         @include center-abs();
         top: 10vh;
-        // font-family: 'Cinzel Decorative', serif;
-        // font-size: 140px;
-        // font-weight: 700;
 
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        // text-align: center;
-        // line-height: 120px;
-        // color: rgb(123, 1, 1);
-        // text-shadow: -1px 1px 0 #ffbf00,
-        //     1px 1px 0 #ffe8a3,
-        //     1px -1px 0 #ffd6be,
-        //     -1px -1px 0 red,
-        //     0 0 8px #ffeec9,
-        //     0 0 20px #fff;
 
         span {
             font-family: 'Cinzel Decorative', serif;
@@ -126,14 +106,9 @@
 @media screen and (max-width: 500px) {
     #startscreen {
         background-size: 160%;
-        // img {
-        //     width: 160%;
-        //     transform: translateY(40px);
-        // }
 
         #title {
             top: 15vh;
-            // line-height: 85px;
 
             span {
                 font-size: 100px;
